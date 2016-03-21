@@ -22,5 +22,5 @@ $__System.register("1", ["2", "3"], function($__export) {
 
 })
 (function(factory) {
-  module.exports = factory(require("ramdaamda@0.19.1/dist/ramda.js"), require("rxm:rx@4.1.0/index.js"));
+  module.exports = factory(require("ramda"), require("rx"));
 });
