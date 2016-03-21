@@ -1,0 +1,58 @@
+{
+  "name": "jspm-to-cjs-test",
+  "version": "0.0.0",
+  "description": "<description>",
+  "author": "<author>",
+  "license": "<license>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<user>/<module>"
+  },
+  "keywords": [
+    "es5",
+    "es6",
+    "es2015",
+    "stage-1",
+    "jspm"
+  ],
+  "main": "dist/jspm-to-cjs-test.cjs.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "jspm.browser.js",
+    "jspm.config.js"
+  ],
+  "dependencies": {
+    "ramda": "^0.19.1",
+    "rx": "^4.1.0"
+  },
+  "devDependencies": {
+    "jspm": "beta"
+  },
+  "scripts": {
+    "postinstall": "jspm install",
+    "build": "jspm build src/index.js - ramda - rx dist/jspm-to-cjs-test.cjs.js --format cjs --skip-source-maps"
+  },
+  "jspm": {
+    "dependencies": {
+      "ramda": "npm:ramda@^0.19.1",
+      "rx": "npm:rx@^4.1.0"
+    },
+    "format": "esm",
+    "main": "src/index.js",
+    "files": [
+      "src/*"
+    ],
+    "meta": {
+      "src/*": {
+        "format": "esm"
+      }
+    },
+    "devDependencies": {
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.8"
+    },
+    "peerDependencies": {
+      "process": "github:jspm/nodelibs-process@^0.2.0-alpha"
+    }
+  }
+}
